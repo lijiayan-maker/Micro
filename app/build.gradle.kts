@@ -71,6 +71,7 @@ dependencies {
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.dynamicanimation.ktx)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.viewpager2)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
