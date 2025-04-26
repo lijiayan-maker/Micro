@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mycro.micro.View.PullUpDrawerLayout
+        android:id="@+id/slide_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pull_up_drawerlayout_height"
+        android:layout_gravity="bottom"
+        android:background="@drawable/slide_layout_shape"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/handle"
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/layout_title_shape_dark"
+            android:visibility="gone" />
+
+        <!--   隐藏小横条，用这个View占位-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="17dp" />
+
+        <LinearLayout
+            android:id="@+id/main_container_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </com.mycro.micro.View.PullUpDrawerLayout>
+
+</FrameLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!--预览画面距离顶部的Layout，用透明的layout实现预览画面不顶格-->
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        android:visibility="visible" />
+
+    <!--LinearLayout更容易等分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@color/control_background">
+
+        <ImageView
+            android:id="@+id/toolbar_flash"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_flash_off_24"
+            android:layout_marginLeft="5dp" />
+
+    </LinearLayout>
+
+
+    <!--AutoFitTextureView删除多余属性、布局位于工具栏下方-->
+    <com.mycro.micro.camera.AutoFitTextureView
+        android:id="@+id/texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"/>
+
+    <ViewStub
+        android:id="@+id/flash_stub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout="@layout/flash_list">
+    </ViewStub>
+
+    <!--layout_gravity属性只能在LinearLayout、FrameLayout等布局中使用，在RelativeLayout布局中会失效。-->
+    <Button
+        android:id="@+id/btn_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/control"
+        android:layout_marginBottom="20dp"
+        android:text="@string/style" />
+
+    <!--ViewStub 展示或者隐藏内容-->
+    <ViewStub
+        android:id="@+id/style_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/style_recycleview">
+    </ViewStub>
+
+
+    <!--这里一定要把visibility设置为invisible，不然第一次显示无法正常处理宽高，对焦框显示的位置会偏离-->
+    <com.mycro.micro.View.FocusSunView
+        android:id="@+id/focusView"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:visibility="invisible"
+        layout_constraintStart_toStartOf="@+id/texture"/>
+    <FrameLayout
+        android:id="@+id/control"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/control_background" tools:ignore="RtlCompat">
+
+        <Button
+            android:id="@+id/btn_switch_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:text="@string/switch_camera" />
+
+
+        <Button
+            android:id="@+id/picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/picture" />
+
+        <ImageButton
+            android:id="@+id/info"
+            android:contentDescription="@string/description_info"
+            style="@android:style/Widget.Material.Light.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:padding="20dp"
+            android:src="@drawable/ic_action_info" tools:ignore="NewApi"/>
+
+    </FrameLayout>
+
+</RelativeLayout>

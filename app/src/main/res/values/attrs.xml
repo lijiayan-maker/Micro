@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自由控制是方形圆角（就叫Round）还是圆形（Circle）效果，所以需要一个自定义属性type，来通知ImageView分别绘制Round还是Circle-->
+    <attr name="borderRadio" format="dimension"/>
+    <attr name="type">
+        <enum name="circle" value="0"/>
+        <enum name="round" value="1"/>
+    </attr>
+    <declare-styleable name="CircleImageView">
+        <!--同时，圆角半径想要灵活输入，也需要一个自定义属性-->
+        <attr name="borderRadio"/>
+        <attr name="type" />
+    </declare-styleable>
+</resources>

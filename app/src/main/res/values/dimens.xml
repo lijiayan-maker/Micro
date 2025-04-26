@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="half_popup_radius">30dp</dimen>
+    <dimen name="pull_up_drawer_height">40.0000dp</dimen>
+    <dimen name="pull_up_drawerlayout_height">456dp</dimen>
+    <dimen name="pull_up_drawerlayout_move_judgment">150dp</dimen>
+</resources>

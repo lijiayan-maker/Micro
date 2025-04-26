@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_Flash"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone">
+
+<!--灯光切换的时候用文字选项，不现实图片-->
+    <Button
+        android:id="@+id/btn_auto_flash"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:text="自动" />
+
+    <Button
+        android:id="@+id/btn_open_flash"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:text="开启" />
+
+    <Button
+        android:id="@+id/btn_always_flash"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:text="常亮" />
+
+    <Button
+        android:id="@+id/btn_close_flash"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:layout_weight="1"
+        android:textColor="@color/yellow"
+        android:text="关闭" />
+
+
+
+</LinearLayout>
