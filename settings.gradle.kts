@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Micro"
 include(":app")
- 
+include(":lib-reflection")
